@@ -3,21 +3,21 @@
 
 var nomes = [];
 
-function CadastrarEstudante(){ 
+function cadastrarEstudante(){ 
     nomes.push(prompt("Digite o nome do estudante: "));
 }
 
-function VerificarParada(){
-    CadastrarEstudante();
+function verificarParada(){
+    cadastrarEstudante();
     if(nomes[nomes.length - 1] != "PARE") {       
-        VerificarParada();
+        verificarParada();
     } else {
         nomes.pop();
-        ApresentarLista()
+        apresentarLista()
     }
 }
 
-function ApresentarLista(){
+function apresentarLista(){
     var texto = `A quantidade de alunos cadastrados foi ${nomes.length} e os alunos foram:\n`;
     var textoHTML = texto;
     for(var i = 0; i < nomes.length; i++){
