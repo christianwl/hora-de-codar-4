@@ -47,4 +47,3 @@ function ApresentarNaTela(conteudo){
     document.write('<br><br>' + conteudo);
 }
 
-RetirarFrutas()

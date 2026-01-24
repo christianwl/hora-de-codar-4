@@ -29,5 +29,5 @@ function ApresentarLista(){
     document.write(textoHTML);
 }
 
-VerificarParada();
+
 

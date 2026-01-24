@@ -17,5 +17,3 @@ function ApresentarNaTela(conteudo){
     alert(conteudo);
     document.write('<br><br>' + conteudo);
 }
-
-VerificaPlaneta();
