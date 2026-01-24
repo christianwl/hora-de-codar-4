@@ -22,3 +22,11 @@ Uma lista pré-definida de planetas onde o sistema valida se a entrada do usuár
 ### 3. Lista de Compras Interativa
 Um simulador de mercado onde o usuário visualiza as frutas disponíveis e pode removê-las uma a uma.
 * **Destaque técnico:** Uso de `frutas.indexOf()` combinado com `frutas.splice()` para localizar e remover itens específicos, e um laço `while` que monitora o comprimento do array (`frutas.length`) para encerrar a sessão.
+
+## Autor
+
+<div>
+  <a href="https://github.com/christianwl">
+    <img src="https://contrib.rocks/image?repo=christianwl/hora-de-codar-4" alt="Autor do Portfolio"/>
+  </a>
+</div>
