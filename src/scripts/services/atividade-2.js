@@ -5,7 +5,7 @@
 
 var planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
 
-function verificaPlaneta() {
+export function verificaPlaneta() {
   var usuarioDigitou = prompt("Digite um nome de um planeta: ");
   var negativa = planetas.includes(usuarioDigitou) ? "" : "não ";
 

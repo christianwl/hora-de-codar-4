@@ -17,7 +17,7 @@ function listarFrutas(valor) {
   return frutas.includes(valor);
 }
 
-function retirarFrutas() {
+export function retirarFrutas() {
   var continuarLoop = true;
 
   while (continuarLoop) {

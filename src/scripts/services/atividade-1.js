@@ -3,11 +3,7 @@
 
 var nomes = [];
 
-function cadastrarEstudante(){ 
-    nomes.push(prompt("Digite o nome do estudante: "));
-}
-
-function verificarParada(){
+export function verificarParada(){
     cadastrarEstudante();
     if(nomes[nomes.length - 1] != "PARE") {       
         verificarParada();
@@ -15,6 +11,10 @@ function verificarParada(){
         nomes.pop();
         apresentarLista()
     }
+}
+
+function cadastrarEstudante(){ 
+    nomes.push(prompt("Digite o nome do estudante: "));
 }
 
 function apresentarLista(){
