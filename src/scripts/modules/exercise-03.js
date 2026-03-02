@@ -11,23 +11,23 @@
 
 // Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
 
-var frutas = ["ingá", "banana", "mamão", "abacaxi", "limão"];
+let frutas = ["ingá", "banana", "mamão", "abacaxi", "limão"];
 
 function listarFrutas(valor) {
   return frutas.includes(valor);
 }
 
 export function retirarFrutas() {
-  var continuarLoop = true;
+  let continuarLoop = true;
 
   while (continuarLoop) {
-    var textoFrutas = "As frutas disponíveis são: ";
-    for (var i = 0; i < frutas.length; i++) {
-      var espaco = i < frutas.length - 1 ? ", " : ".";
+    let textoFrutas = "As frutas disponíveis são: ";
+    for (let i = 0; i < frutas.length; i++) {
+      let espaco = i < frutas.length - 1 ? ", " : ".";
       textoFrutas += frutas[i] + espaco;
     }
     apresentarNaTela(textoFrutas);
-    var frutaDigitada = prompt("Digite o nome de uma fruta: ");
+    let frutaDigitada = prompt("Digite o nome de uma fruta: ");
 
     if (listarFrutas(frutaDigitada)) {
       frutas.splice(frutas.indexOf(frutaDigitada), 1);

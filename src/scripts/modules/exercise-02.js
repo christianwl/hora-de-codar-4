@@ -3,11 +3,11 @@
 
 // Verifique se o planeta que o usuário informou está na array e informe ao usuário.
 
-var planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
+let planetas = ["Terra", "Marte", "Plutão", "Vênus", "Júpiter", "Saturno"];
 
 export function verificaPlaneta() {
-  var usuarioDigitou = prompt("Digite um nome de um planeta: ");
-  var negativa = planetas.includes(usuarioDigitou) ? "" : "não ";
+  let usuarioDigitou = prompt("Digite um nome de um planeta: ");
+  let negativa = planetas.includes(usuarioDigitou) ? "" : "não ";
 
   apresentarNaTela(`O Planeta ${usuarioDigitou} ${negativa}está no array`);
 }
