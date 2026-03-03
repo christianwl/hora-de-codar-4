@@ -1,32 +1,35 @@
 // 1
 /* 
-Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar "PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. 
+Crie um programa onde o usuário possa cadastrar estudantes sem limites, e, em seguida, Se o usuário digitar 
+"PARE" o programa deve exibir a quantidade de estudantes cadastrados e a lista com cada um deles. 
 */
 
-let nomes = [];
+import { receberString } from "../utils/prompt-manager.js";
 
-export function verificarParada() {
-  cadastrarEstudante();
-  if (nomes[nomes.length - 1] != "PARE") {
-    verificarParada();
-  } else {
-    nomes.pop();
-    apresentarLista();
-  }
+export function showExercise01(){
+  showList();
 }
 
-function cadastrarEstudante() {
-  nomes.push(prompt("Digite o nome do estudante: "));
+function registerStudents() {
+  let nameList = [];
+  let canContinue = true;
+  do {
+    let name = receberString(
+      "Digite o nome do estudante: \n\nOBS: Para encerrar digite 'PARE'",
+    );
+
+    canContinue = !(name.toLowerCase() == "pare");
+
+    if (canContinue) {
+      nameList.push(name);
+    }
+  } while (canContinue);
+
+  return nameList;
 }
 
-function apresentarLista() {
-  let texto = `A quantidade de alunos cadastrados foi ${nomes.length} e os alunos foram:\n`;
-  let textoHTML = texto;
-  for (let i = 0; i < nomes.length; i++) {
-    let textoFormatado = `${i + 1} - ${nomes[i]}`;
-    texto += `\n${textoFormatado}\n`;
-    textoHTML += "<br><br>" + textoFormatado;
-  }
-  alert(texto);
-  document.write(textoHTML);
+function showList(){
+  let studentList = registerStudents();
+  let textList = studentList.reduce((result, str, i) => result + `${i + 1}º ${str}\n`, "");
+  alert(`A quantidade de alunos cadastrados foi ${studentList.length} e os alunos foram:\n${textList}`)
 }

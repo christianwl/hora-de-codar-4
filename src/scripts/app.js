@@ -1,11 +1,11 @@
-import { verificarParada } from "./services/atividade-1.js";
-import { verificaPlaneta } from "./services/atividade-2.js";
-import { retirarFrutas } from "./services/atividade-3.js";
+import { showExercise01 } from "./modules/exercise-01.js";
+import { showExercise02 } from "./modules/exercise-02.js";
+import { showExercise03 } from "./modules/exercise-03.js";
 
 const ACTIVITIES_CONFIG = [
-  { label: "Iniciar Atividade 1", action: verificarParada },
-  { label: "Iniciar Atividade 2", action: verificaPlaneta },
-  { label: "Iniciar Atividade 3", action: retirarFrutas },
+  { label: "Iniciar Atividade 1", action: showExercise01 },
+  { label: "Iniciar Atividade 2", action: showExercise02 },
+  { label: "Iniciar Atividade 3", action: showExercise03 },
 ];
 
 function createBtn({ label, action }) {
