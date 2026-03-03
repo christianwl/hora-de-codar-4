@@ -13,7 +13,7 @@ Vamos criar uma lista de compras.
  Quando o array não possuir mais itens dentro de si, escreva "Lista de compras finalizada".
 */
 
-import { receberString } from "../utils/prompt-manager";
+import { receberString } from "../utils/prompt-manager.js";
 import { textNormalizer } from "../utils/text-formatter.js";
 
 
